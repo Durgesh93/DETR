@@ -1,0 +1,48 @@
+DETR model for multi-mnist dataset
+
+
+The directory structure of the code is as follws
+
+.
+├── datasets
+│   ├── __init__.py
+│   ├── mmnist
+│   │   ├── test
+│   │   │   └── normal
+│   │   │       ├── bboxes.pickle
+│   │   │       ├── filenames.pickle
+│   │   │       ├── imgs
+│   │   │       └── labels.pickle
+│   │   └── train
+│   │       └── normal
+│   │           ├── bboxes.pickle
+│   │           ├── filenames.pickle
+│   │           ├── imgs
+│   │           └── labels.pickle
+│   └── mmnist.py
+├── DETR_mmnist_inference.ipynb
+├── DTER_mmnist_train.ipynb
+├── models
+│   ├── backbone.py
+│   ├── detr.py
+│   ├── __init__.py
+│   ├── __init__.pyc
+│   ├── matcher.py
+│   ├── position_encoding.py
+│   ├── transformer_attn.py
+│   ├── transformer.py
+│   └── util
+│       ├── box_ops.py
+│       ├── misc.py
+│       └── __pycache__
+│           ├── box_ops.cpython-36.pyc
+│           └── misc.cpython-36.pyc
+├── README
+└── utils.py
+
+Need pytorch 1.5 or later python2. Please refer requirements.txt for further detail.
+
+The inference code is written in DETR_mmnist_inference.ipynb
+The training code is written in DTER_mmnist_train.ipynb
+The model contains the same code as given in official facebook research repository.
+The datasets contain code for the dataloader.
